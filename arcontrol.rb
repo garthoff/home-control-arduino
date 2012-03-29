@@ -3,6 +3,7 @@ require 'logger'
 
 class ARControl
     def initialize
+	sleep(10)
         @log = Logger.new(STDOUT)
         @log.info 'Opening arduino serial interface'
         @arduino = SerialPort.new '/dev/ttyACM0', 115200
